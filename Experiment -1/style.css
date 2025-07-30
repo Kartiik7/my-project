@@ -11,10 +11,10 @@ body{
 
 form{
     background-color: rgb(77, 160, 160);
-    width: 300px;
-    height: 250px;
+    width: 200px;
+    height: 150px;
     margin: 25px;
-    padding: 15px;
+    padding: 5px;
     border: 30px groove black;
     border-radius: 15px;
     display: flex;
