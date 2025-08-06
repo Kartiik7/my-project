@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: black;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+header {
+    grid-column: 1 /span 3;
+    height: 100px;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+aside {
+    background-color: rgb(206, 191, 191);
+    grid-row: 2 /span 2;
+    height: 670px;
+    width: 350px;
+    padding-top: 10px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+main {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    padding: 15px;
+}
+
+
+footer {
+    grid-column: 2 / span 3;
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    background-color: green;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+button {
+    font-size: 15px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+body.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.light-theme aside {
+    background-color: rgb(206, 191, 191);
+}
+
+body.dark-theme aside {
+    background-color: #080808;
+}
+
+body.dark-theme footer{
+    background-color: #1e1e1e;
+}
+
+body.dark-theme header{
+    background-color: #1e1e1e;
+}
+
+body.dark-theme button{
+    background-color: #f5f0f0;
+    color: #000;
+}
+
