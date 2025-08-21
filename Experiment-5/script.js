@@ -1,16 +1,42 @@
-const categorySelect = document.getElementById("category");
-const products = document.querySelectorAll(".product");
+const categories = ["all", "clothing", "electronics", "books"];
 
-categorySelect.addEventListener("change", function () {
-    const selectedCategory = this.value;
+const products = [
+    { name: "T-Shirt", category: "clothing" },
+    { name: "Jeans", category: "clothing" },
+    { name: "Headphones", category: "electronics" },
+    { name: "Smartphone", category: "electronics" },
+    { name: "Novel", category: "books" },
+    { name: "Cookbook", category: "books" }
+];
+
+const categorySelect = document.getElementById("category");
+const productList = document.getElementById("product-list");
+
+function loadCategories() {
+    categories.forEach(cat => {
+        const option = document.createElement("option");
+        option.value = cat;
+        option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1); 
+        categorySelect.appendChild(option);
+    });
+}
+
+function displayProducts(filterCategory) {
+    productList.innerHTML = "";
 
     products.forEach(product => {
-        const productCategory = product.getAttribute("data-category");
-
-        if (selectedCategory === "all" || productCategory === selectedCategory) {
-            product.style.display = "block";
-        } else {
-            product.style.display = "none";
+        if (filterCategory === "all" || product.category === filterCategory) {
+            const div = document.createElement("div");
+            div.classList.add("product");
+            div.textContent = product.name;
+            productList.appendChild(div);
         }
     });
+}
+
+loadCategories();
+displayProducts("all");
+
+categorySelect.addEventListener("change", function () {
+    displayProducts(this.value);
 });
