@@ -2,10 +2,10 @@ const categories = ["all", "clothing", "electronics", "books"];
 
 const products = [
     { name: "T-Shirt", category: "clothing" },
-    { name: "Jeans", category: "clothing" },
-    { name: "Headphones", category: "electronics" },
     { name: "Smartphone", category: "electronics" },
     { name: "Novel", category: "books" },
+    { name: "Jeans", category: "clothing" },
+    { name: "Headphones", category: "electronics" },
     { name: "Cookbook", category: "books" }
 ];
 
