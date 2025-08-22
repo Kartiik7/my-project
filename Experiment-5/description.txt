@@ -1,0 +1,4 @@
+In this experiment, we created a simple web page that displays a list of products and allows users to filter them by category.
+Both products and categories are stored in JavaScript arrays. The dropdown menu is filled dynamically from the category array, and when the user selects a category, 
+JavaScript updates the product list on the page without reloading. Additionally, the main container has been centered in the body to improve the overall appearance and give the page a neat, balanced layout. 
+This experiment helps in understanding how arrays, event handling, and DOM manipulation can be combined to make web pages interactive and user-friendly.
