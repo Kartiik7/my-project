@@ -1,12 +1,8 @@
 import { useState } from 'react'
-import './App.css' // Use App.css for styles
+import '../App.css'
 
-function LibraryManagement() {
-    const [books, setBooks] = useState([
-        { title: '1984', author: 'George Orwell' },
-        { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
-        { title: 'To Kill a Mockingbird', author: 'Harper Lee' }
-    ])
+function LibraryManagement({ books: initialBooks }) {
+    const [books, setBooks] = useState(initialBooks)
     const [search, setSearch] = useState('')
     const [newTitle, setNewTitle] = useState('')
     const [newAuthor, setNewAuthor] = useState('')
