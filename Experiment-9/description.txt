@@ -1,0 +1,27 @@
+Person Class Hierarchy with Student and Teacher Subclasses
+
+Objective:
+Practice inheritance in JavaScript using ES6 classes.
+
+Description:
+1. Person Class
+   - Properties: name, age
+   - Method: displayInfo()
+
+2. Student Class
+   - Extends Person
+   - Extra property: course
+   - Overrides displayInfo()
+
+3. Teacher Class
+   - Extends Person
+   - Extra property: subject
+   - Overrides displayInfo()
+
+4. Demo
+   - Create Student and Teacher objects
+   - Call methods to show inheritance & overriding
+
+Example Output:
+Name: Kartik, Age: 19, Course: Computer Science
+Name: Dr. Sharma, Age: 45, Subject: Artificial Intelligence
