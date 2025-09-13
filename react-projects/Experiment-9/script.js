@@ -1,38 +1,35 @@
-class Person {
+export class Person {
     constructor(name, age) {
         this.name = name;
         this.age = age;
     }
-
     displayInfo() {
-        console.log(`Name: ${this.name}, Age: ${this.age}`);
+        return `Name: ${this.name}, Age: ${this.age}`;
     }
 }
 
-class Student extends Person {
+export class Student extends Person {
     constructor(name, age, course) {
         super(name, age);
         this.course = course;
     }
-
     displayInfo() {
-        console.log(`Name: ${this.name}, Age: ${this.age}, Course: ${this.course}`);
+        return `Name: ${this.name}, Age: ${this.age}, Course: ${this.course}`;
     }
 }
 
-class Teacher extends Person {
+export class Teacher extends Person {
     constructor(name, age, subject) {
         super(name, age);
         this.subject = subject;
     }
-
     displayInfo() {
-        console.log(`Name: ${this.name}, Age: ${this.age}, Subject: ${this.subject}`);
+        return `Name: ${this.name}, Age: ${this.age}, Subject: ${this.subject}`;
     }
 }
 
 const student1 = new Student("Kartik", 19, "Computer Science");
-student1.displayInfo();
+console.log(student1.displayInfo());
 
 const teacher1 = new Teacher("Dr. Sharma", 45, "Artificial Intelligence");
-teacher1.displayInfo();
+console.log(teacher1.displayInfo());

@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useState } from "react";
 import "./App.css";
 import { Student, Teacher } from "../script.js";
@@ -6,7 +5,7 @@ import { Student, Teacher } from "../script.js";
 function App() {
   const [showScriptCode, setShowScriptCode] = useState(false);
 
-  const scriptJsCode = `class Person {
+  const scriptJsCode = `export class Person {
   constructor(name, age) {
     this.name = name;
     this.age = age;
@@ -17,7 +16,7 @@ function App() {
   }
 }
 
-class Student extends Person {
+export class Student extends Person {
   constructor(name, age, course) {
     super(name, age);
     this.course = course;
@@ -28,7 +27,7 @@ class Student extends Person {
   }
 }
 
-class Teacher extends Person {
+export class Teacher extends Person {
   constructor(name, age, subject) {
     super(name, age);
     this.subject = subject;
