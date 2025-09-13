@@ -1,42 +1,76 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.library-card{
+  margin-top: 70px;
+  position: relative;
+  width: 70%;
+  justify-self: center;
+}
+
+.library-header {
   text-align: center;
+  margin-bottom: 24px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.library-search {
+  margin-bottom: 18px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-input {
+  display: block;
+  width: 30%;
+  padding: 8px 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.library-form {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  box-sizing: border-box;
 }
 
-.card {
-  padding: 2em;
+.form-input {
+  flex: 1;
+  padding: 8px 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.add-btn {
+  border: 1px solid black;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.library-list {
+  margin-top: 8px;
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #000409;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+}
+
+.book-title {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.book-author {
+  font-size: 0.98rem;
+}
+
+.remove-btn {
+  border: 1px solid black;
+  padding: 3px 7px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.empty-msg {
+  text-align: center;
+  margin-top: 18px;
 }
