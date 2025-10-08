@@ -13,7 +13,7 @@ const EventForm = ({ onAddEvent }) => {
     }
 
     const newEvent = {
-      id: Date.now(), 
+      id: Date.now(),
       name: eventName.trim(),
       date: eventDate,
     };
