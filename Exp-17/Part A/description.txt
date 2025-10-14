@@ -1,0 +1,35 @@
+Experiment 17A - Redux Toolkit Shopping Cart
+
+OBJECTIVE:
+Demonstrate Redux Toolkit for state management in a React application through a simple shopping cart implementation.
+
+WHAT'S IMPLEMENTED:
+- Redux Toolkit store configuration with cart state management
+- Shopping cart functionality: add products, update quantities, remove items
+- Three main components: ProductList, ShoppingCart, and Header
+- Real-time state updates across all components
+- Cart slice with modern Redux syntax using createSlice
+
+KEY FEATURES:
+- Add products to cart with "Add to Cart" buttons
+- Update item quantities directly in the cart
+- Remove items from cart
+- Display total items count and total amount in header
+- Persistent state management across component interactions
+
+TECHNOLOGIES USED:
+- React with Vite
+- Redux Toolkit (createSlice, configureStore)
+- React-Redux hooks (useSelector, useDispatch)
+
+LEARNING OUTCOMES:
+- Understanding Redux Toolkit's simplified approach to state management
+- Implementing actions and reducers with createSlice
+- Managing complex application state across multiple components
+- Real-time UI updates based on state changes
+
+FILES STRUCTURE:
+- store/store.js: Redux store configuration
+- store/cartSlice.js: Cart-specific state and actions
+- components/: ProductList, ShoppingCart, Header components
+- App.jsx: Main application component

@@ -1,0 +1,71 @@
+/* Header Styles */
+.header {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.store-title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cart-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px 20px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+}
+
+.cart-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cart-count {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.cart-total {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .store-title {
+    font-size: 1.8rem;
+  }
+  
+  .cart-badge {
+    padding: 8px 15px;
+  }
+  
+  .cart-info {
+    gap: 2px;
+  }
+}

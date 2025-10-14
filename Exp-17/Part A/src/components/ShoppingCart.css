@@ -1,0 +1,33 @@
+/* Simple Shopping Cart Styles */
+.shopping-cart {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
+.shopping-cart h2 {
+  margin-bottom: 15px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.cart-item input {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+}
+
+.cart-item button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
