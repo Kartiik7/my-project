@@ -5,12 +5,12 @@ on:
     branches:
       - main
     paths:
-      - 'react-projects\Experiment-8**'
+      - 'react-projects\Experiment-8\**'
   pull_request:
     branches:
       - main
     paths:
-      - 'react-projects\Experiment-8**'
+      - 'react-projects\Experiment-8\**'
 
 jobs:
   build:
