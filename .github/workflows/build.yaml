@@ -19,9 +19,6 @@ jobs:
       run:
         working-directory: react-projects\Experiment-8
 
-      permissions:
-        contents: read
-        packages: write
         
     steps:
       # Step 1: Checkout code
