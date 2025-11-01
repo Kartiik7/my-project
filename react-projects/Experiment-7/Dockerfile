@@ -1,5 +1,5 @@
 # ---- Stage 1: Build the React app ----
-FROM node:22 AS build
+FROM node:20 AS build
 # Use an official Node image. Using a specific version (node:18) gives reproducibility.
 
 WORKDIR /app

@@ -1,16 +1,16 @@
-name: Manually Build React App (Experiment-8)
+name: Manually Build React App (Experiment-7)
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'react-projects/Experiment-8/**'
+      - 'react-projects/Experiment-7/**'
   pull_request:
     branches:
       - main
     paths:
-      - 'react-projects/Experiment-8/**'
+      - 'react-projects/Experiment-7/**'
   
   workflow_dispatch: # given button to run worflow manually
 
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: react-projects/Experiment-8
+        working-directory: react-projects/Experiment-7
 
         
     steps:
@@ -42,7 +42,7 @@ jobs:
       # Step 4: Build Docker image
       - name: Build Docker Image
         run: |
-          docker build -t react-experiment-8 .
+          docker build -t react-experiment-7 .
       
       - name: Check Docker Username (for debug only)
         run: echo "Docker user is $DOCKER_USERNAME"
@@ -60,6 +60,6 @@ jobs:
       - name: Push Image to Docker Hub
         if: github.ref == 'refs/heads/main'
         run: |
-          docker tag react-experiment-8 ${{ secrets.DOCKERHUB_USERNAME }}/react-experiment-8:latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/react-experiment-8:latest
+          docker tag react-experiment-7 ${{ secrets.DOCKERHUB_USERNAME }}/react-experiment-7:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/react-experiment-7:latest
 
