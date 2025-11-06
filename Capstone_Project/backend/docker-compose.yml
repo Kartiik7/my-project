@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # The Node.js API service
+  api:
+    # Build the image from the Dockerfile in the current directory
+    build: .
+    ports:
+      # Map host port 5000 to container port 5000
+      - "5000:5000"
+    # Load environment variables from the .env file
+    env_file: ./.env
+    # Set this to development, as your server.js uses it
+    environment:
+      - NODE_ENV=development
+    # This service depends on the 'mongo' service to be running
+    depends_on:
+      - mongo
+    volumes:
+      # Mount the local directory into the container for live-reloading
+      # This is great for development
+      - .:/app
+      # Exclude node_modules from the volume mount to use the container's version
+      - /app/node_modules
+
+  # The MongoDB database service
+  mongo:
+    image: mongo:latest
+    ports:
+      # Map host port 27017 to container port 27017
+      - "27017:27017"
+    volumes:
+      # Persist database data in a named volume
+      - mongo-data:/data/db
+    # You can add environment variables for mongo user/pass here if needed
+
+# Define the named volume for data persistence
+volumes:
+  mongo-data:
