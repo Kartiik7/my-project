@@ -3,6 +3,7 @@ node_modules/
 
 # Environment variables
 .env
+frontend/.env
 
 # Firebase service account key (very important!)
 serviceAccountKey.json

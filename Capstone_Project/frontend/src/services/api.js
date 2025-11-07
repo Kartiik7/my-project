@@ -1,7 +1,10 @@
 import axios from 'axios';
 
-// Set the backend API base URL
-const API_URL = 'http://localhost:5000';
+// Set the backend API base URL (use Vite env var when available)
+// Use import.meta.env.VITE_API_URL in production; fall back to localhost for local dev
+const API_URL = typeof import.meta !== 'undefined' && import.meta.env?.VITE_API_URL
+  ? import.meta.env.VITE_API_URL
+  : 'http://localhost:5000';
 
 const api = axios.create({
   baseURL: API_URL,

@@ -6,15 +6,16 @@ import { getFirestore } from "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Prefer reading values from Vite environment variables (VITE_FIREBASE_*)
+// For local dev the originals are kept as fallbacks.
 const firebaseConfig = {
-  apiKey: "AIzaSyBnKaX2cOsz7aKOmMUZ-4XM1Dz_01svAf8",
-  authDomain: "capstoneproject-ca332.firebaseapp.com",
-  projectId: "capstoneproject-ca332",
-  storageBucket: "capstoneproject-ca332.firebasestorage.app",
-  messagingSenderId: "731868260597",
-  appId: "1:731868260597:web:e0863bbb46f6f2e6d73dbc",
-  measurementId: "G-YLEHG7WCEZ"
+  apiKey: import.meta.env?.VITE_FIREBASE_API_KEY || "AIzaSyBnKaX2cOsz7aKOmMUZ-4XM1Dz_01svAf8",
+  authDomain: import.meta.env?.VITE_FIREBASE_AUTH_DOMAIN || "capstoneproject-ca332.firebaseapp.com",
+  projectId: import.meta.env?.VITE_FIREBASE_PROJECT_ID || "capstoneproject-ca332",
+  storageBucket: import.meta.env?.VITE_FIREBASE_STORAGE_BUCKET || "capstoneproject-ca332.firebasestorage.app",
+  messagingSenderId: import.meta.env?.VITE_FIREBASE_MESSAGING_SENDER_ID || "731868260597",
+  appId: import.meta.env?.VITE_FIREBASE_APP_ID || "1:731868260597:web:e0863bbb46f6f2e6d73dbc",
+  measurementId: import.meta.env?.VITE_FIREBASE_MEASUREMENT_ID || "G-YLEHG7WCEZ"
 };
 
 // Initialize Firebase
