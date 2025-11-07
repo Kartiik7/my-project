@@ -9,11 +9,21 @@ const app = express();
 
 // --- MIDDLEWARE ---
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:5173', 'https://my-project-7so6.onrender.com'], // Allow React dev server
-    credentials: true
+  origin: function (origin, callback) {
+    const allowedOrigins = [
+      'http://localhost:3000',
+      'http://localhost:5173',
+      'https://my-project-7so6.onrender.com'
+    ];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
 }));
 
-app.options('*', cors());
 
 app.use(express.json()); // Body parser for JSON
 app.use(cookieParser()); // Parser for cookies
@@ -53,4 +63,5 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
+
 
