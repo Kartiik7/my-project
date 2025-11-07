@@ -1,0 +1,26 @@
+Capstone Project — Full‑stack Web Application
+
+This Capstone Project is a full-stack web application built with a Node.js/Express backend and a Vite-based frontend. It demonstrates user authentication, role-based admin routes, a RESTful API, integration with Firebase Admin, and containerization support via Docker.
+
+Key features:
+- User registration and login (JWT-based authentication)
+- Admin routes for managing application data
+- REST API endpoints for front-end consumption
+- Firebase Admin integration for server-side operations
+- Jest-based backend tests
+- Docker and docker-compose for containerized development
+
+Location of code:
+- Backend: `Capstone_Project/backend/` (entry: `server.js` or `app.js`, routes in `routes/`, controllers in `controllers/`)
+- Frontend: `Capstone_Project/frontend/` (Vite project, source in `src/`)
+
+Quick start (developer):
+1. Backend: install dependencies and run from `Capstone_Project/backend/` (create a `.env` with DB and auth secrets). 
+2. Frontend: install dependencies and run from `Capstone_Project/frontend/`.
+
+Notes:
+- Ensure Firebase credentials (if used) are available at `backend/serviceAccountKey.json` or supplied via environment variables. Do not commit secrets.
+- Update `README.md` with exact environment variable names, API endpoints, and any project-specific setup before distribution.
+
+Author / Maintainer: (add your name or contact here)
+License: (add license information here)
