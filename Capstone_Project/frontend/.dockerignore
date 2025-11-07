@@ -1,0 +1,21 @@
+# Node dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Local environment files
+.env
+.env.local
+
+# Git + IDE
+.git
+.gitignore
+.vscode
+.DS_Store
+
+# Build artifacts
+dist
+build
+
+# Firebase key or secrets
+serviceAccountKey.json
