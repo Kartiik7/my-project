@@ -9,9 +9,12 @@ const app = express();
 
 // --- MIDDLEWARE ---
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:5173'], // Allow React dev server
+    origin: ['http://localhost:3000', 'http://localhost:5173', 'https://my-project-7so6.onrender.com'], // Allow React dev server
     credentials: true
 }));
+
+app.options('*', cors());
+
 app.use(express.json()); // Body parser for JSON
 app.use(cookieParser()); // Parser for cookies
 
